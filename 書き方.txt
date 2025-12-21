@@ -1,0 +1,169 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{jreport}
+\usepackage{suthesis}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{listings, jvlisting}
+\usepackage{float}
+\graphicspath{{figs/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,png,PNG}
+\renewcommand{\lstlistingname}{ソースコード}
+\lstset{
+    frame=shadowbox,
+    numbers=left,
+    tabsize=2,
+    breaklines=true,
+    columns=fixed,
+    basewidth=0.5em,
+    framesep=0.2cm
+}
+
+% 表紙
+\thesis{
+\bf 2025年度 \\ 
+%
+% select one of the following
+修士論文
+}
+
+\title{
+\bf SN開発におけるデバッグシステムの開発
+}
+
+\professor{
+\begin{tabular}[t]{lr}
+アサノ デービッド & 教授
+不破泰 & 肩書き
+\end{tabular}
+}
+
+\date{
+2025年1月30日提出
+}
+
+\author{
+信州大学大学院 総合理工学研究科 工学専攻 情報数理・融合システム分野 \\ 
+24W6047A\\
+辻村篤志 \\
+}
+
+% 本文
+\begin{document}
+\maketitle
+\maegaki
+
+\begin{jabstract} %あらまし
+あらましを書く。
+
+\end{jabstract}
+
+\maetsuke
+\tableofcontents
+\listoffigures
+\listoftables
+
+\hombun
+
+%_/_/_/_/_/_第一章_/_/_/_/_/_
+\chapter{序論} 
+序論を書く。
+
+%_/_/_/_/_/_第二章_/_/_/_/_/_
+\chapter{背景技術} 
+本開発では、通勤・住宅届を申請するためのwebページ上のフォームを作成した。以下ではフォームを作成するために必要な技術とその概要を示す。
+\section{webページの実装}
+\subsection{HTML}
+\begin{par}
+  HTMLとはHyper Text Markup Languageの略であり、webサイトのコンテンツの構造を作るためのマークアップ言語である。
+\end{par}
+\begin{par}
+  HTMLではタグという部品を組み合わせてコンテンツを作っている。タグの例として、webページの見出しに使われるh1タグや、ユーザからの入力を受け付けるinputタグ、表を作る際に使われるtableタグなどがある。
+\end{par}
+\begin{par}
+  タグにはクラスやidを指定することができる。複数のタグにある一つのクラスを指定することはできるが、あるidはHTML中にに一つしか存在してはいけない。クラスやidは後述するCSSやJavaScriptにおいて、特定のクラスやあるidにのみ処理を施したいという場合に必要である。
+\end{par}
+\begin{par}
+  HTMLのコードは大きく分けて、HTMLのメタ情報や外部リソースへのリンクなどを記述するhead要素と実際にwebページに表示する内容を記述するbody要素からなる。実際のHTMLのソースコードの例をソースコード\ref{html_src_1}に示す。\\
+\end{par}
+
+
+
+\begin{lstlisting}[caption=HTMLのソースコードの例,label=html_src_1]
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>ページタイトル</title>
+    </head>
+    <body>
+      <h1>h1タグのサンプル</h1>
+      <input type="text" id="input_1">
+    </body>
+  </html>
+
+  \end{lstlisting}
+
+\begin{enumerate}
+  \item Bootstrapのサイト(https://getbootstrap.jp/)にアクセス
+  \item サイト内の「CDN経由でインクルードする」にある二つのコードのうち上のコード(赤枠内)をコピーする(図\ref{fig:bootstrap_image_1}を参照)。
+  \item コピーしたコードをHTMLのhead要素内にペーストする(ソースコード\ref{bootstrap_src_1}参照)。
+  \item HTML内のBootstrapのCSSを導入したいタグのクラスに指定のクラス名を与える。
+  ユーザの入力を受け付けるinputタグにBootstrapのform-controlクラスを指定した例をソースコード\ref{bootstrap_src_2}に、その結果どのように外観が変わったかを図\ref{fig:bootstrap_image_2}に示す。
+\end{enumerate}
+
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.9\linewidth]{bootstrap_image_1.jpg}
+\end{center}
+\vspace{-2em} % 画像とキャプションの間に0.5emの垂直スペースを挿入
+\caption{Bootstrapのサイト
+\label{fig:bootstrap_image_1}
+}
+\end{figure} 
+ 
+
+\vspace{1cm} % 1cmの垂直スペースを挿入  
+
+
+
+
+
+%_/_/_/_/_/_第３章_/_/_/_/_/_
+\chapter{システムの説明}
+
+\section{システムの概要}
+\begin{par}
+今回開発したシステムは、大学職員が提出する通勤・住宅届の申請をオンラインで行えるようにするシステムである。システムの概要図を図\ref{fig:system_img_1}に示す。ユーザ（職員）は通勤・住宅届の申請フォームをWeb上で開き、申請内容（氏名や職員番号、届出の理由、通勤経路、家賃額など）入力し、必要に応じて証明書類の画像ファイルを添付する。ユーザが提出すると、Google Maps APIにより通勤距離の計算を行い、その後GASにより以下のような処理が行われる。
+
+\begin{itemize}
+  \item 申請内容を抽出
+  \item 手当額の計算等の処理
+  \item Googleドライブ上に職員ごとのフォルダ（個人用フォルダ）を作成し、添付された画像ファイルをアップロード
+  \item 個人用フォルダに、Googleスプレッドシート（個人用スプレッドシート）を作成し、申請内容を入力
+  \item 申請をしたすべての職員の申請内容を蓄積するためのスプレッドシートに申請内容を入力
+  \item 担当部署1宛てに申請内容を記載したメールを送信
+  \item 担当部署1の職員が受信したメールを開き、申請内容を確認したうえでメール内に設置してあるボタンを押下すると担当部署2宛てに同様のメールを送信
+\end{itemize}
+
+%_/_/_/_/_/_第４章_/_/_/_/_/_
+\chapter{操作例}
+\clearpage
+
+%_/_/_/_/_/_第5章_/_/_/_/_/_
+\chapter{結論}
+結論を書く。
+
+% ========
+% 参考文献
+% ========
+\bunken
+\begin{thebibliography}{99}
+\bibitem{ref1}
+信州　花子 : 「知的通信と知的符号化」
+(2022)
+
+
+\end{thebibliography}
+
+\end{document}

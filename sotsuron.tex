@@ -1,0 +1,132 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{jreport}
+\usepackage{suthesis}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{listings, jvlisting}
+\usepackage{float}
+\graphicspath{{figs/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,png,PNG}
+\renewcommand{\lstlistingname}{ソースコード}
+\lstset{
+    frame=shadowbox,
+    numbers=left,
+    tabsize=2,
+    breaklines=true,
+    columns=fixed,
+    basewidth=0.5em,
+    framesep=0.2cm
+}
+
+% 表紙
+\thesis{
+\bf 2025年度 \\ 
+%
+% select one of the following
+修士論文
+}
+
+\title{
+\bf SN開発におけるデバッグシステムの開発 \\
+}
+
+\professor{
+\begin{tabular}[t]{lr}
+アサノ デービッド & 教授 \\
+\end{tabular}
+}
+
+\date{`'
+2025年1月30日提出
+}
+
+\author{
+信州大学大学院 総合理工学研究科 工学専攻 情報数理・融合システム分野 \\ 
+24W6047A\\
+辻村篤志 \\
+}
+
+% 本文
+\begin{document}
+\maketitle
+\maegaki
+
+\begin{jabstract} %あらまし
+あらましを書く。
+
+\end{jabstract}
+
+\maetsuke
+\tableofcontents
+\listoffigures
+\listoftables
+
+\hombun
+
+%_/_/_/_/_/_第一章_/_/_/_/_/_
+\chapter{序論} 
+序論を書く。
+
+%_/_/_/_/_/_第二章_/_/_/_/_/_
+\chapter{背景技術} 
+背景技術を書く。
+\section{webページの実装}
+\subsection{HTML}
+\begin{par}
+  HTMLとはHyper Text Markup Languageの略であり、webサイトのコンテンツの構造を作るためのマークアップ言語である。
+\end{par}
+\begin{par}
+  HTMLのコードは大きく分けて、HTMLのメタ情報や外部リソースへのリンクなどを記述するhead要素と実際にwebページに表示する内容を記述するbody要素からなる。実際のHTMLのソースコードの例をソースコード\ref{html_src_1}に示す。\\
+\end{par}
+
+
+
+\begin{lstlisting}[caption=HTMLのソースコードの例,label=html_src_1]
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>ページタイトル</title>
+    </head>
+    <body>
+      <h1>h1タグのサンプル</h1>
+      <input type="text" id="input_1">
+    </body>
+  </html>
+
+  \end{lstlisting}
+
+
+
+\vspace{1cm} % 1cmの垂直スペースを挿入  
+
+
+
+
+
+%_/_/_/_/_/_第３章_/_/_/_/_/_
+\chapter{システムの説明}
+
+\section{システムの概要}
+\begin{par}
+システムの概要を書く。
+\end{par}
+
+%_/_/_/_/_/_第４章_/_/_/_/_/_
+\chapter{操作例}
+\clearpage
+
+%_/_/_/_/_/_第5章_/_/_/_/_/_
+\chapter{結論}
+結論を書く。
+
+% ========
+% 参考文献
+% ========
+\bunken
+\begin{thebibliography}{99}
+\bibitem{citekey}参考文献の例
+
+
+\end{thebibliography}
+
+\end{document}
