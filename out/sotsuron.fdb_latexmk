@@ -1,13 +1,12 @@
 # Fdb version 4
-["dvipdf"] 1766292961.94578 "out/sotsuron.dvi" "out/sotsuron.pdf" "out/sotsuron" 1766292963.87727 0
-  "out/sotsuron.dvi" 1766292961 6848 d2fac5eb49a822f8f2b6e8e226b294fc "latex"
+["dvipdf"] 1766384148.83863 "out/sotsuron.dvi" "out/sotsuron.pdf" "out/sotsuron" 1766384150.08377 0
+  "out/sotsuron.dvi" 1766384148 19632 748d46fae7642e1f63d9bbbdfbd8fc82 "latex"
   (generated)
   "out/sotsuron.pdf"
   (rewritten before read)
-["latex"] 1766292960.72684 "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" "out/sotsuron.dvi" "sotsuron" 1766292963.87265 0
-  "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" 1766292959 2577 105964059f301ffffd283d9fce893eb7 ""
+["latex"] 1766384147.7754 "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" "out/sotsuron.dvi" "sotsuron" 1766384150.07924 0
+  "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" 1766384145 9645 29096841438acbd5d29c88561be4abdd ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1758180057 3524 cb3e574dea2d1052e39280babc910dc8 ""
-  "c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1758179638 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1758182542 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1758182542 1196 1be730212205a270378fba11a44765dc ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm" 1758182542 1196 ede67ffb8cb4a6a8b9436c82b428664c ""
@@ -25,7 +24,6 @@
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1758179093 1124 6c73e740cf17375f03eec0ee63599741 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1758179093 1116 933a60c408fc0a863a92debe84b2d294 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1758179093 1120 8b7d695260f3cff42e636090a8002094 ""
-  "c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd" 1758180913 2470 cbfd89aa18d2d104ec0041c9de14e544 ""
   "c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1758180289 1224 978390e9c2234eab29404bc21b268d1e ""
   "c:/texlive/2025/texmf-dist/tex/latex/graphics-def/dvipdfmx.def" 1758180290 12296 04d6453afafd99986deba3629756d9ec ""
   "c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty" 1758180287 18363 69bb4f5538964bfea50d1e6d89cbe69f ""
@@ -44,11 +42,11 @@
   "c:/texlive/2025/texmf-var/web2c/euptex/platex.fmt" 1758184864 3622582 82b4bc67bf9b872c38991f64e8b98253 ""
   "c:/texlive/2025/texmf.cnf" 1758184292 713 e69b156964470283e0530f5060668171 ""
   "float.sty" 1700811402 6749 16d2656a1984957e674b149555f1ea1d ""
-  "out/sotsuron.aux" 1766292961 1540 ed3b304d64823220dcf4e33c1f172110 "latex"
-  "out/sotsuron.lof" 1766292961 100 4353d675f6b597e3aa3d5147c8369dec "latex"
-  "out/sotsuron.lot" 1766292961 100 4353d675f6b597e3aa3d5147c8369dec "latex"
-  "out/sotsuron.toc" 1766292961 561 fb4b8bd75d113439cd5980e3f67ffaf9 "latex"
-  "sotsuron.tex" 1766292959 2577 105964059f301ffffd283d9fce893eb7 ""
+  "out/sotsuron.aux" 1766384148 3296 549567df1ef8a1aa8c118ed831ae70d7 "latex"
+  "out/sotsuron.lof" 1766384148 120 4b5392bf4295ae9f4473a7a4fff7fdc5 "latex"
+  "out/sotsuron.lot" 1766384148 120 4b5392bf4295ae9f4473a7a4fff7fdc5 "latex"
+  "out/sotsuron.toc" 1766384148 1558 cdb217683ad97ea87aa0d59a79e297ab "latex"
+  "sotsuron.tex" 1766384145 9645 29096841438acbd5d29c88561be4abdd ""
   "suthesis.sty" 1700207062 7451 ada3a2e5b0ead1153078cf7bcc148c3d ""
   (generated)
   "out/sotsuron.aux"

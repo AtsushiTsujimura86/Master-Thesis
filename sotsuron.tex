@@ -32,10 +32,11 @@
 \professor{
 \begin{tabular}[t]{lr}
 アサノ デービッド & 教授 \\
+不破 泰 & 肩書き \\
 \end{tabular}
 }
 
-\date{`'
+\date{
 2025年1月30日提出
 }
 
@@ -63,68 +64,138 @@
 \hombun
 
 %_/_/_/_/_/_第一章_/_/_/_/_/_
-\chapter{序論} 
-序論を書く。
+\chapter{はじめに} 
+はじめにを書く。
+\section{研究背景}
+\begin{par}
+近年、無線センサネットワーク（Wireless Sensor Network：WSN）やIoT（Internet of Things）は、環境モニタリングやスマートシティ、インフラ監視、農業、ヘルスケアなど、さまざまな分野での応用が期待されている。実際，IoT全体の接続デバイス数は急速に増加している。IoT Analyticsによれば，2023年時点で約166億台，2024年には約188億台に達し，2030年には約400億台に到達すると予測されている\cite{iotanalytics2024}。また，WSNの普及も市場規模の面から拡大を続けており，Grand View Researchの報告では，産業用WSN（Industrial WSN）の市場は2023年に約51.9億ドルと推定され，2024年から2030年にかけて年平均12.1\%の成長が見込まれている\cite{grandview2024}。
+
+
+しかし、これらのシステムを構築するためには、複雑な通信プロトコルの設計やデータ処理の設計および実装が求められ、開発者には幅広い専門知識と多大な工数が必要となる。さらに、無線通信環境の構築やマイコン設定など導入時のハードルも高く、これらの研究や開発の多くはシミュレーション環境やエミュレータ上での検証にとどまることが多い。しかし、シミュレーション環境では実機特有の挙動や外部環境の影響を完全に再現することが難しく、実機での検証が不可欠である場合も多く、実機でのプロトコル検証を容易にするための支援環境の整備が求められている。
+\end{par}
+
+\section{当研究室における先行研究}
+\begin{par}
+当研究室の先行研究では、無線通信プロトコルの動作を定義した状態遷移図から自動生成したプログラムを汎用ハード上で動作させ、プロトコルを実機で動作検証できる環境が構築されていた（旭ら\cite{asahi}、小林ら\cite{kobayashi}）。
+\end{par}
+\section{先行研究の課題}
+\begin{par}
+このシステムにより基本的な通信プロトコルの動作検証が可能となったが、デバッグ方法はコンソールへのログ出力に依存しており、通信処理が高速に進むため逐次的な状態遷移を追跡することが難しかった。その結果、複雑な動作を含むプロトコルに対しては、異常動作の原因を把握しづらく、開発効率や教育的利用の観点では十分でない点が課題として残されていた。
+\end{par}
+
+\section{本研究の目的}
+\begin{par}
+本研究の目的は、従来研究で課題となっていたデバッグ効率の低さを改善し、実機でのプロトコル検証をより効果的に行える環境を実現することである。そのために、状態遷移図から生成したコードの動作をログとして出力し、それを可視化・ステップ実行できる仕組みを開発した。これにより、プロトコルの動作を逐次的に把握でき、異常動作の原因究明を容易にするとともに、教育や応用実証に適した支援環境を提供することを目指す。
+\end{par}
+
+\section{本論文の構成}
+\begin{par}
+本論文は全7章から構成されている。第1章では、本研究の背景として当研究室におけるこれまでの研究の流れを整理し、先行研究で顕在化した課題を明らかにした上で、本研究の目的を述べる。  
+第2章では、当研究室における先行研究システムについて、その構成や実現されてきた機能を整理するとともに、運用およびデバッグの観点から課題をまとめる。  
+第3章では、先行研究の課題を踏まえ、本研究で提案するシステムの概要と設計方針について述べる。ここでは、全体構成および各コンポーネントの役割を中心に説明する。  
+第4章では、提案システムの設計および実装について述べ、特にデバッグ支援を目的としたログ取得方式や状態遷移の可視化手法について詳述する。  
+第5章では、提案システムの操作例を示し、実際の利用を通してどのような情報が得られるかを説明する。  
+第6章では、従来手法との比較を通じて提案システムの有効性を評価し、その結果について考察を行う。  
+最後に第7章では、本研究のまとめを行うとともに、今後の課題および展望について述べる。
+\end{par}
+
 
 %_/_/_/_/_/_第二章_/_/_/_/_/_
-\chapter{背景技術} 
-背景技術を書く。
-\section{webページの実装}
-\subsection{HTML}
+\chapter{システム構成と使用技術} 
+本章では、本研究で開発したデバッグシステムの構成と使用した技術について説明する。
+\section{システム構成}
 \begin{par}
-  HTMLとはHyper Text Markup Languageの略であり、webサイトのコンテンツの構造を作るためのマークアップ言語である。
-\end{par}
-\begin{par}
-  HTMLのコードは大きく分けて、HTMLのメタ情報や外部リソースへのリンクなどを記述するhead要素と実際にwebページに表示する内容を記述するbody要素からなる。実際のHTMLのソースコードの例をソースコード\ref{html_src_1}に示す。\\
+本システムは、ハードウェアデバイスとソフトウェアコンポーネントから構成される。ハードウェアデバイスとしては、マイコン、無線モデム、GPSセンサを使用し、これらを 組み合わせてセンサネットワークを構築する。ソフトウェアコンポーネントとしては、使用言語、UML設計ツール、ビルドシステムが含まれ、これらを用いてプロトコルの設計・実装・デバッグを行う。図を挿入してシステム構成を示す。次節以降では、各コンポーネントについて詳細に説明する。
 \end{par}
 
+\section{ハードウェアデバイス}
+センサネットワークを構築するために使用するハードウェアデバイスについて説明する。
+\subsection{マイコン}
+マイコンについて説明する。
+\subsection{無線モデム}
+無線モデムについて説明する。
+\subsection{GPSセンサ}
+GPSセンサについて説明する。
 
+\section{ソフトウェア}
+\subsection{使用言語}
+使用言語について説明する。
+\subsection{UML設計ツール}
+UML設計ツールについて説明する。
+\subsection{ビルドシステム}
+ビルドシステムについて説明する。
 
-\begin{lstlisting}[caption=HTMLのソースコードの例,label=html_src_1]
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>ページタイトル</title>
-    </head>
-    <body>
-      <h1>h1タグのサンプル</h1>
-      <input type="text" id="input_1">
-    </body>
-  </html>
-
-  \end{lstlisting}
-
-
+\section{開発環境}
+\begin{par}
+開発環境について記述する。
+\end{par}
 
 \vspace{1cm} % 1cmの垂直スペースを挿入  
 
 
 
 
-
 %_/_/_/_/_/_第３章_/_/_/_/_/_
-\chapter{システムの説明}
-
+\chapter{設計・実装}
+\begin{par}
+具体的にどのように設計・実装を行ったかを書く。
+\end{par}
 \section{システムの概要}
 \begin{par}
-システムの概要を書く。
+システムの概要を書く。ｚステムの概要を書く。ｚ
 \end{par}
 
 %_/_/_/_/_/_第４章_/_/_/_/_/_
-\chapter{操作例}
+\chapter{検証}
+\begin{par}
+検証を書く。
+\end{par}
 \clearpage
 
 %_/_/_/_/_/_第5章_/_/_/_/_/_
 \chapter{結論}
 結論を書く。
 
+% 今後の展望
+\chapter{今後の展望}
+今後の展望を書く。
+
+
 % ========
 % 参考文献
 % ========
 \bunken
 \begin{thebibliography}{99}
-\bibitem{citekey}参考文献の例
+\bibitem{iotanalytics2024} IoT Analytics: "State of IoT 2024: Number of Connected IoT Devices Grows 16\% to 16.6 Billion", 2024.  
+
+\bibitem{grandview2024} Grand View Research: "Industrial Wireless Sensor Network Market Size, Share \& Trends Analysis Report, 2024–2030", 2024.
+
+\bibitem{asahi}旭 健汰, アサノ デービッド, 不破 泰：  
+“無線モデムを用いたセンサネットワークMACプロトコル検証システムの開発”，  
+信学技報,  NS2023‑147, pp.120–125, Dec. 2023.
+
+\bibitem{platformio}PlatformIO Labs, “What is PlatformIO?”, 
+https://docs.platformio.org/en/latest/
+what-is-platformio.html, 参照 Oct. 15, 2025.
+
+\bibitem{kobayashi}小林 遼, アサノ デービッド, 不破 泰：  
+“センサーネットワーク検証システムにおける遷移図を用いたMACプロトコル設計環境の開発”，  
+信学技報,  NS2023‑148, pp.126–131, Dec. 2023.  
+
+
+\bibitem{Mermaid}Mermaid.js, “Overview,” 
+https://mermaid.js.org/intro/, 参照 Oct. 15, 2025.
+
+\bibitem{MermaidStateDiagram}Mermaid.js, “State Diagram Syntax (stateDiagram-v2),” 
+https://mermaid.js.org/
+syntax/stateDiagram.html, 参照 Oct. 15, 2025.
+
+\bibitem{MQTT}Eclipse Foundation, “MQTT: Message Queuing Telemetry Transport,” 
+https://mqtt.org/, 参照 Oct. 15, 2025.
+
+\bibitem{sonoda} 園田 継一郎, 不破 泰, アサノ デービッド, "無線センサーネット
+ワークの端末・中継機における送信タイミング決定時間短縮方
+法の検討, " 信学技報, NS2022-138, Dec. 2022.
 
 
 \end{thebibliography}
