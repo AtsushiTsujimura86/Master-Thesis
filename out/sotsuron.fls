@@ -98,4 +98,20 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./images/old_system_overview.pdf
+INPUT ./images/old_system_overview.pdf
+INPUT ./images/old_system_overview.pdf
+INPUT extractbb -B cropbox -O ./images/old_system_overview.pdf
+INPUT ./images/old_debug.png
+INPUT ./images/old_debug.png
+INPUT ./images/old_debug.png
+INPUT extractbb -B cropbox -O ./images/old_debug.png
+INPUT ./images/new_system_overview.pdf
+INPUT ./images/new_system_overview.pdf
+INPUT ./images/new_system_overview.pdf
+INPUT extractbb -B cropbox -O ./images/new_system_overview.pdf
+INPUT ./images/devices.jpg
+INPUT ./images/devices.jpg
+INPUT ./images/devices.jpg
+INPUT extractbb -B cropbox -O ./images/devices.jpg
 INPUT out/sotsuron.aux

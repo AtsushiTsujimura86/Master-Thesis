@@ -11,40 +11,68 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}先行研究の課題}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}本研究の目的}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.5}本論文の構成}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {第2章}システム構成と使用技術}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第2章}先行研究の提案システム}{4}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}システム構成}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}ハードウェアデバイス}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}マイコン}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}無線モデム}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}GPSセンサ}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}ソフトウェア}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}使用言語}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}UML設計ツール}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}ビルドシステム}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}開発環境}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {第3章}設計・実装}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}システムの概要}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces 先行研究システムの概要図 }}{4}{}\protected@file@percent }
+\newlabel{fig:old_system_overview}{{2.1}{4}{}{figure.2.1}{}}
+\citation{kobayashi-yu}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}実現事項}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}課題}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第3章}提案システムの概要と設計方針}{6}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}システムの概要}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {第4章}検証}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}設計方針}{6}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 従来のデバッグ方法 }}{7}{}\protected@file@percent }
+\newlabel{fig:old_debug}{{3.1}{7}{}{figure.3.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}システムの構成}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}各コンポーネントの概要}{7}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 提案システムの概要図 }}{8}{}\protected@file@percent }
+\newlabel{fig:new_system_overview}{{3.2}{8}{}{figure.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}コード生成コンポーネント}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}組込みシステムコンポーネント}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces どこでモデム(左)とGPSモジュール(右)}}{9}{}\protected@file@percent }
+\newlabel{fig:devices}{{3.3}{9}{}{figure.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}デバッグ支援システムコンポーネント}{9}{}\protected@file@percent }
+\citation{platformio}
+\citation{Mermaid}
+\citation{MermaidStateDiagram}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第4章}設計及び実装}{10}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第5章}結論}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}使用ソフトウェア、ツール}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}各コンポーネントの接続}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}デバッグシステムの設計}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}ログ取得方式の設計}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}状態遷移可視化の設計}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}実装概要}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第5章}操作例}{12}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第6章}今後の展望}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}操作例の概要}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}操作例}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}デバッグ支援としての有効性}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第6章}評価と考察}{13}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}評価方針}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}評価方法}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}評価結果と考察}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {第7章}まとめと今後の展望}{14}{}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}まとめ}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}今後の展望}{14}{}\protected@file@percent }
 \bibcite{iotanalytics2024}{1}
 \bibcite{grandview2024}{2}
 \bibcite{asahi}{3}
-\bibcite{platformio}{4}
-\bibcite{kobayashi}{5}
-\bibcite{Mermaid}{6}
-\bibcite{MermaidStateDiagram}{7}
-\bibcite{MQTT}{8}
-\bibcite{sonoda}{9}
-\@writefile{toc}{\contentsline {chapter}{参考文献}{10}{}\protected@file@percent }
-\gdef \@abspage@last{16}
+\bibcite{kobayashi}{4}
+\bibcite{kobayashi-yu}{5}
+\bibcite{platformio}{6}
+\bibcite{Mermaid}{7}
+\bibcite{MermaidStateDiagram}{8}
+\bibcite{MQTT}{9}
+\bibcite{sonoda}{10}
+\@writefile{toc}{\contentsline {chapter}{参考文献}{15}{}\protected@file@percent }
+\gdef \@abspage@last{21}

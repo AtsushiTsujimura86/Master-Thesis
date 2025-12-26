@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.18)  22 DEC 2025 15:15
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.18)  25 DEC 2025 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -201,45 +201,76 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 
 [3]
 第 2 章
+File: ./images/old_system_overview.pdf Graphic file (type pdf)
+<./images/old_system_overview.pdf>
 
 
 [4
 
 ]
 
-[5]
+[5
+
+]
 第 3 章
+File: ./images/old_debug.png Graphic file (type bmp)
+<./images/old_debug.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 [6
 
 ]
+File: ./images/new_system_overview.pdf Graphic file (type pdf)
+<./images/new_system_overview.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[7]
+
+[8]
+File: ./images/devices.jpg Graphic file (type bmp)
+<./images/devices.jpg>
+
+
+[9]
 第 4 章
 
 
-[7
+[10
 
 ]
+
+[11]
 第 5 章
 
 
-[8
-
+[12
 
 ]
 第 6 章
 
 
-[9
+[13
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+第 7 章
+
+
+[14
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 353--355
 []\OT1/cmr/m/n/12 Eclipse Foun-da-tion,  \JY1/mc/m/n/12 “ \OT1/cmr/m/n/12 MQTT: Mes-sage Queu-ing Teleme-try Trans-port, \JY1/mc/m/n/12 ”
  []
 
 
 
-[10
+[15
 
 ] (out/sotsuron.aux)
  ***********
@@ -249,12 +280,12 @@ L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2587 strings out of 468440
- 39784 string characters out of 5450466
- 446796 words of memory out of 5000000
- 31254 multiletter control sequences out of 15000+600000
+ 2627 strings out of 468440
+ 40818 string characters out of 5450466
+ 446904 words of memory out of 5000000
+ 31284 multiletter control sequences out of 15000+600000
  641029 words of font info for 95 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 57i,12n,65p,695b,362s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,1008b,362s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/sotsuron.dvi (16 pages, 19632 bytes).
+Output written on out/sotsuron.dvi (21 pages, 39668 bytes).
