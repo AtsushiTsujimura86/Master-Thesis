@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1767417893.74276 "out/sotsuron.dvi" "out/sotsuron.pdf" "out/sotsuron" 1767417895.51268 0
-  "out/sotsuron.dvi" 1767417893 52388 bd859a15c2952b1753a4a2eceecfc747 "latex"
+["dvipdf"] 1767424676.83468 "out/sotsuron.dvi" "out/sotsuron.pdf" "out/sotsuron" 1767424678.99224 0
+  "out/sotsuron.dvi" 1767424676 55832 7ee6fd1ded8d596a87fba4f0314a3ce2 "latex"
   (generated)
   "out/sotsuron.pdf"
   (rewritten before read)
-["latex"] 1767417889.43028 "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" "out/sotsuron.dvi" "sotsuron" 1767417895.50672 0
-  "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" 1767417888 30408 1b34424778ee8b400825786391ebde3b ""
+["latex"] 1767424671.2288 "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" "out/sotsuron.dvi" "sotsuron" 1767424678.98534 0
+  "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" 1767424673 32399 fbb2f74be04303b7575084a2eb70834a ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1758180057 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1758182542 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1758182542 1196 1be730212205a270378fba11a44765dc ""
@@ -46,11 +46,11 @@
   "images/new_system_overview.pdf" 1766478230 516668 910426ce38af8bf1475022b6426b86ea ""
   "images/old_debug.png" 1759981598 37824 a1d8c8bb929779baf5a039df1586d05f ""
   "images/old_system_overview.pdf" 1766478230 516668 910426ce38af8bf1475022b6426b86ea ""
-  "out/sotsuron.aux" 1767417893 7104 8a11fdf6ec5b54a460ff30aea55732da "latex"
-  "out/sotsuron.lof" 1767417893 541 e935e81bac2dd0348cf18ab7f977cb63 "latex"
-  "out/sotsuron.lot" 1767417893 140 104a8a462b27a2267fd07b368245cdd0 "latex"
-  "out/sotsuron.toc" 1767417893 3437 d1ad038dfdcf7efcfedd23512465bc6a "latex"
-  "sotsuron.tex" 1767417888 30408 1b34424778ee8b400825786391ebde3b ""
+  "out/sotsuron.aux" 1767424676 7486 741eabe6bd7da98e500eec1547dd5f82 "latex"
+  "out/sotsuron.lof" 1767424676 541 e935e81bac2dd0348cf18ab7f977cb63 "latex"
+  "out/sotsuron.lot" 1767424676 140 104a8a462b27a2267fd07b368245cdd0 "latex"
+  "out/sotsuron.toc" 1767424676 3696 8c1c16b85790c97b5335ce245a980600 "latex"
+  "sotsuron.tex" 1767424673 32399 fbb2f74be04303b7575084a2eb70834a ""
   "suthesis.sty" 1700207062 7451 ada3a2e5b0ead1153078cf7bcc148c3d ""
   (generated)
   "out/sotsuron.aux"
