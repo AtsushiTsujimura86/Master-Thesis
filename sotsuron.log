@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.10.8)  14 JAN 2026 20:43
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.10.8)  16 JAN 2026 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,10 +263,11 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 271.
 
 
-[12]
-File: ./images/devices.jpg Graphic file (type bmp)
-<./images/devices.jpg>
+LaTeX Warning: Reference `log_format' on page 12 undefined on input line 283.
 
+
+
+[12]
 
 [13]
 
@@ -297,7 +298,7 @@ File: ./images/devices.jpg Graphic file (type bmp)
 [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 462--464
+Underfull \hbox (badness 10000) in paragraph at lines 469--471
 []\OT1/cmr/m/n/12 Eclipse Foun-da-tion,  \JY1/mc/m/n/12 “ \OT1/cmr/m/n/12 MQTT: Mes-sage Queu-ing Teleme-try Trans-port, \JY1/mc/m/n/12 ”
  []
 
@@ -317,12 +318,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2635 strings out of 468391
- 40902 string characters out of 5445622
- 448979 words of memory out of 5000000
- 31340 multiletter control sequences out of 15000+600000
+ 2896 strings out of 468391
+ 42915 string characters out of 5445622
+ 478983 words of memory out of 5000000
+ 31601 multiletter control sequences out of 15000+600000
  642441 words of font info for 97 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 57i,12n,65p,1053b,362s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,1053b,1056s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sotsuron.dvi (29 pages, 69252 bytes).
+Output written on sotsuron.dvi (29 pages, 70484 bytes).
