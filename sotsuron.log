@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.10.8)  16 JAN 2026 13:38
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.10.8)  17 JAN 2026 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -90,45 +90,60 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box72
 \@float@everytoks=\toks21
 \@floatcapt=\box73
+) (c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks22
+\c@algorithm=\count299
+) (c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count300
+\c@ALC@line=\count301
+\c@ALC@rem=\count302
+\c@ALC@depth=\count303
+\ALC@tlm=\skip52
+\algorithmicindent=\skip53
 ) (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2025-06-09 L3 backend support: dvips
 \l__pdfannot_backend_content_box=\box74
 \l__pdfannot_backend_model_box=\box75
-\g__pdfannot_backend_int=\count299
-\g__pdfannot_backend_link_int=\count300
-\g__pdfannot_backend_link_sf_int=\count301
+\g__pdfannot_backend_int=\count304
+\g__pdfannot_backend_link_int=\count305
+\g__pdfannot_backend_link_sf_int=\count306
 ) (./sotsuron.aux)
 \openout1 = `sotsuron.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-\c@lstlisting=\count302
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+\c@lstlisting=\count307
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 51.
+(Font)              <14.4> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <7> on input line 55.
 
-Overfull \hbox (17.08986pt too wide) in paragraph at lines 51--51
+Overfull \hbox (17.08986pt too wide) in paragraph at lines 55--55
  [][][][] 
  []
 
@@ -138,16 +153,16 @@ Overfull \hbox (17.08986pt too wide) in paragraph at lines 51--51
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
 
 
 [0]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 60.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 60.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 64.
  (./sotsuron.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
@@ -190,9 +205,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 69.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 73.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 69.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 73.
 
 
 [1
@@ -211,7 +226,7 @@ File: ./images/old_system_overview.pdf Graphic file (type pdf)
 
 ]
 
-LaTeX Warning: Citation `kobayashi-yu' on page 5 undefined on input line 142.
+LaTeX Warning: Citation `kobayashi-yu' on page 5 undefined on input line 146.
 
 
 
@@ -239,7 +254,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7]
 
-LaTeX Warning: Citation `kobayashi-yu' on page 8 undefined on input line 211.
+LaTeX Warning: Citation `kobayashi-yu' on page 8 undefined on input line 215.
 
 
 
@@ -258,13 +273,9 @@ File: ./images/devices.jpg Graphic file (type bmp)
 
 [11]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 271.
+(Font)              No change on input line 273.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 271.
-
-
-LaTeX Warning: Reference `log_format' on page 12 undefined on input line 283.
-
+(Font)              No change on input line 273.
 
 
 [12]
@@ -272,39 +283,59 @@ LaTeX Warning: Reference `log_format' on page 12 undefined on input line 283.
 [13]
 
 [14]
+File: ./images/var_update_logic.png Graphic file (type bmp)
+<./images/var_update_logic.png>
+
 
 [15]
+
+[16]
+File: ./images/log_mode_layout.png Graphic file (type bmp)
+<./images/log_mode_layout.png>
+
+
+[17]
+File: ./images/timeline_1.png Graphic file (type bmp)
+<./images/timeline_1.png>
+
+
+[18]
+File: ./images/timeline_2.png Graphic file (type bmp)
+<./images/timeline_2.png>
+
+
+[19]
 第 5 章
 
 
-[16
+[20
 
 ]
 
-[17]
+[21]
 
-[18]
+[22]
 第 6 章
 
 
-[19
+[23
 
 ]
 
-[20]
+[24]
 第 7 章
 
 
-[21
+[25
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
+Underfull \hbox (badness 10000) in paragraph at lines 593--595
 []\OT1/cmr/m/n/12 Eclipse Foun-da-tion,  \JY1/mc/m/n/12 “ \OT1/cmr/m/n/12 MQTT: Mes-sage Queu-ing Teleme-try Trans-port, \JY1/mc/m/n/12 ”
  []
 
 
 
-[22
+[26
 
 ] (./sotsuron.aux)
  ***********
@@ -318,12 +349,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2896 strings out of 468391
- 42915 string characters out of 5445622
- 478983 words of memory out of 5000000
- 31601 multiletter control sequences out of 15000+600000
+ 3159 strings out of 468391
+ 47338 string characters out of 5445622
+ 491468 words of memory out of 5000000
+ 31850 multiletter control sequences out of 15000+600000
  642441 words of font info for 97 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 57i,12n,65p,1053b,1056s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,1053b,1616s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sotsuron.dvi (29 pages, 70484 bytes).
+Output written on sotsuron.dvi (33 pages, 83536 bytes).
