@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.10.8)  17 JAN 2026 12:47
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.10.8)  20 JAN 2026 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -180,19 +180,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 
-[4])
+[4]
+
+[5])
 \tf@toc=\write3
 \openout3 = `sotsuron.toc'.
 
 
 
-[5] (./sotsuron.lof)
+[6] (./sotsuron.lof)
 \tf@lof=\write4
 \openout4 = `sotsuron.lof'.
 
 
 
-[6
+[7
 
 ] (./sotsuron.lot)
 \tf@lot=\write5
@@ -200,7 +202,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 
-[7
+[8
 
 ]
 第 1 章
@@ -270,72 +272,113 @@ File: ./images/devices.jpg Graphic file (type bmp)
 [10
 
 ]
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 290.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 291.
+
+
+LaTeX Warning: Reference `sec:state_vis' on page 11 undefined on input line 303.
+
+
 
 [11]
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 273.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 273.
+File: ./images/log_mode_layout.png Graphic file (type bmp)
+<./images/log_mode_layout.png>
 
 
 [12]
 
 [13]
+File: ./images/serial_monitor_layout.png Graphic file (type bmp)
+<./images/serial_monitor_layout.png>
+File: ./images/sync_mode_layout.png Graphic file (type bmp)
+<./images/sync_mode_layout.png>
+
 
 [14]
-File: ./images/var_update_logic.png Graphic file (type bmp)
-<./images/var_update_logic.png>
-
 
 [15]
-
-[16]
-File: ./images/log_mode_layout.png Graphic file (type bmp)
-<./images/log_mode_layout.png>
-
-
-[17]
 File: ./images/timeline_1.png Graphic file (type bmp)
 <./images/timeline_1.png>
-
-
-[18]
 File: ./images/timeline_2.png Graphic file (type bmp)
 <./images/timeline_2.png>
 
 
+[16]
+
+[17]
+File: ./images/log_parse_flowchart.png Graphic file (type bmp)
+<./images/log_parse_flowchart.png>
+
+
+[18]
+
 [19]
+File: ./images/var_update_logic.png Graphic file (type bmp)
+<./images/var_update_logic.png>
+
+
+[20]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 570.
+ (c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 570.
+
+
+[21]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 602.
+ (c:/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 602.
+
+
+[22]
+
+[23]
+
+[24]
+
+[25]
+
+[26]
 第 5 章
 
 
-[20
+[27
 
 ]
 
-[21]
+[28]
 
-[22]
+[29]
+
+[30]
 第 6 章
 
 
-[23
+[31
 
 ]
 
-[24]
+[32]
 第 7 章
 
 
-[25
+[33
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 593--595
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1045
 []\OT1/cmr/m/n/12 Eclipse Foun-da-tion,  \JY1/mc/m/n/12 “ \OT1/cmr/m/n/12 MQTT: Mes-sage Queu-ing Teleme-try Trans-port, \JY1/mc/m/n/12 ”
  []
 
 
 
-[26
+[34
 
 ] (./sotsuron.aux)
  ***********
@@ -349,12 +392,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3159 strings out of 468391
- 47338 string characters out of 5445622
- 491468 words of memory out of 5000000
- 31850 multiletter control sequences out of 15000+600000
- 642441 words of font info for 97 fonts, out of 8000000 for 9000
+ 3244 strings out of 468391
+ 49163 string characters out of 5445622
+ 589012 words of memory out of 5000000
+ 31925 multiletter control sequences out of 15000+600000
+ 642778 words of font info for 98 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 57i,12n,65p,1053b,1616s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,1053b,1620s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sotsuron.dvi (33 pages, 83536 bytes).
+Output written on sotsuron.dvi (42 pages, 114140 bytes).

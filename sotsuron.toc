@@ -15,44 +15,73 @@
 \contentsline {subsection}{\numberline {3.3.1}コード生成コンポーネント}{8}{}%
 \contentsline {subsection}{\numberline {3.3.2}組込みシステムコンポーネント}{8}{}%
 \contentsline {subsection}{\numberline {3.3.3}デバッグ支援システムコンポーネント}{9}{}%
-\contentsline {chapter}{\numberline {第4章}設計及び実装}{10}{}%
-\contentsline {section}{\numberline {4.1}使用ソフトウェア、ツール}{10}{}%
-\contentsline {section}{\numberline {4.2}各コンポーネントの接続}{11}{}%
-\contentsline {section}{\numberline {4.3}デバッグシステムの設計}{11}{}%
-\contentsline {subsection}{\numberline {4.3.1}動作モード}{12}{}%
-\contentsline {section}{\numberline {4.4}ログ設計}{12}{}%
-\contentsline {subsection}{\numberline {4.4.1}ログ生成の設計}{12}{}%
-\contentsline {section}{\numberline {4.5}ログ解析の設計}{14}{}%
-\contentsline {subsection}{\numberline {4.5.1}ログモードにおけるログ解析}{14}{}%
-\contentsline {subsubsection}{ログ行の分類}{14}{}%
-\contentsline {subsubsection}{状態遷移ログの解析}{15}{}%
-\contentsline {subsubsection}{変数変更ログの解析}{15}{}%
-\contentsline {subsection}{\numberline {4.5.2}同期モードにおけるログ解析}{16}{}%
-\contentsline {section}{\numberline {4.6}ログモードの設計}{16}{}%
-\contentsline {subsection}{\numberline {4.6.1}ログモードのUI設計}{17}{}%
-\contentsline {section}{\numberline {4.7}同期モードの設計}{17}{}%
-\contentsline {subsection}{\numberline {4.7.1}ブラウザ上でのシリアルモニタ実装}{18}{}%
-\contentsline {subsection}{\numberline {4.7.2}同期タイムラインの生成}{18}{}%
-\contentsline {section}{\numberline {4.8}状態遷移可視化の設計}{19}{}%
-\contentsline {section}{\numberline {4.9}実装概要}{19}{}%
-\contentsline {chapter}{\numberline {第5章}操作例}{20}{}%
-\contentsline {section}{\numberline {5.1}操作例の概要}{20}{}%
-\contentsline {section}{\numberline {5.2}操作対象および前提条件}{20}{}%
-\contentsline {section}{\numberline {5.3}状態遷移図の読み込み}{21}{}%
-\contentsline {section}{\numberline {5.4}ログ取得と状態遷移の可視化}{21}{}%
-\contentsline {section}{\numberline {5.5}ステップ実行による逐次確認}{21}{}%
-\contentsline {section}{\numberline {5.6}変数ウォッチ機能の利用}{21}{}%
-\contentsline {section}{\numberline {5.7}複数ノード同期デバッグ}{22}{}%
-\contentsline {section}{\numberline {5.8}操作例のまとめ}{22}{}%
-\contentsline {chapter}{\numberline {第6章}評価と考察}{23}{}%
-\contentsline {section}{\numberline {6.1}評価方針}{23}{}%
-\contentsline {section}{\numberline {6.2}評価方法}{23}{}%
-\contentsline {section}{\numberline {6.3}デバッグ効率の評価}{23}{}%
-\contentsline {section}{\numberline {6.4}状態遷移理解の容易性に関する評価}{24}{}%
-\contentsline {section}{\numberline {6.5}複数ノード同期デバッグの評価}{24}{}%
-\contentsline {section}{\numberline {6.6}考察}{24}{}%
-\contentsline {section}{\numberline {6.7}評価のまとめ}{24}{}%
-\contentsline {chapter}{\numberline {第7章}まとめと今後の展望}{25}{}%
-\contentsline {section}{\numberline {7.1}まとめ}{25}{}%
-\contentsline {section}{\numberline {7.2}今後の展望}{25}{}%
-\contentsline {chapter}{参考文献}{26}{}%
+\contentsline {chapter}{\numberline {第4章}デバッグ支援システムの設計・実装}{10}{}%
+\contentsline {section}{\numberline {4.1}デバッグ支援システムの概要}{10}{}%
+\contentsline {section}{\numberline {4.2}実装技術と採用理由}{10}{}%
+\contentsline {subsection}{\numberline {4.2.1}フロントエンドフレームワーク}{10}{}%
+\contentsline {subsection}{\numberline {4.2.2}UIフレームワーク}{11}{}%
+\contentsline {section}{\numberline {4.3}動作モードとシステム構成}{11}{}%
+\contentsline {subsection}{\numberline {4.3.1}動作モード}{11}{}%
+\contentsline {subsection}{\numberline {4.3.2}モード間で共通に用いる要素}{11}{}%
+\contentsline {section}{\numberline {4.4}ログモードの設計・実装}{12}{}%
+\contentsline {subsection}{\numberline {4.4.1}ログモードの概要}{12}{}%
+\contentsline {subsection}{\numberline {4.4.2}ログモードのUI設計}{12}{}%
+\contentsline {section}{\numberline {4.5}同期モードの設計・実装}{13}{}%
+\contentsline {subsection}{\numberline {4.5.1}同期モードの概要}{13}{}%
+\contentsline {subsection}{\numberline {4.5.2}同期モードのUI設計}{13}{}%
+\contentsline {subsubsection}{シリアルモニタのUI}{13}{}%
+\contentsline {subsubsection}{可視化デバッグのUI}{14}{}%
+\contentsline {subsection}{\numberline {4.5.3}ブラウザ上でのシリアルモニタ実装}{15}{}%
+\contentsline {subsection}{\numberline {4.5.4}同期タイムラインの生成}{16}{}%
+\contentsline {section}{\numberline {4.6}ログ設計}{17}{}%
+\contentsline {subsection}{\numberline {4.6.1}ログ生成の設計}{17}{}%
+\contentsline {subsubsection}{状態遷移イベント}{17}{}%
+\contentsline {subsubsection}{変数変更イベント}{17}{}%
+\contentsline {subsubsection}{その他ログ}{17}{}%
+\contentsline {section}{\numberline {4.7}ログ解析の設計（共通処理）}{18}{}%
+\contentsline {subsection}{\numberline {4.7.1}概要（解析の目的と処理の流れ）}{18}{}%
+\contentsline {subsection}{\numberline {4.7.2}入力ログ形式とログ行の分類}{19}{}%
+\contentsline {subsection}{\numberline {4.7.3}解析結果として構築するデータ構造}{20}{}%
+\contentsline {subsection}{\numberline {4.7.4}変数値スナップショットの再構成方針（継承と更新）}{20}{}%
+\contentsline {subsection}{\numberline {4.7.5}行処理アルゴリズム（擬似コード）}{21}{}%
+\contentsline {subsection}{\numberline {4.7.6}解析結果例}{22}{}%
+\contentsline {section}{\numberline {4.8}ステップ番号に基づく共通表示ロジック}{22}{}%
+\contentsline {subsection}{\numberline {4.8.1}共通の前提：ステップ番号 $i$ と状態スナップショット}{22}{}%
+\contentsline {subsection}{\numberline {4.8.2}ステップ実行のロジック}{23}{}%
+\contentsline {subsection}{\numberline {4.8.3}変数ウォッチ機能のロジック}{24}{}%
+\contentsline {subsection}{\numberline {4.8.4}状態遷移表示機能（ハイライト表示）}{24}{}%
+\contentsline {subsection}{\numberline {4.8.5}Mermaidによる状態遷移図描画（構文生成ロジック）}{25}{}%
+\contentsline {chapter}{\numberline {第5章}評価}{27}{}%
+\contentsline {section}{\numberline {5.1}評価の目的と方針}{27}{}%
+\contentsline {subsection}{\numberline {5.1.1}評価の目的（何を確かめたいか）}{27}{}%
+\contentsline {subsection}{\numberline {5.1.2}評価対象}{27}{}%
+\contentsline {subsection}{\numberline {5.1.3}評価で用いるデータ（実験対象）}{28}{}%
+\contentsline {section}{\numberline {5.2}単一ノードデバッグの評価（ログモード／単一ノード受信の共通部分）}{28}{}%
+\contentsline {subsection}{\numberline {5.2.1}評価シナリオ}{28}{}%
+\contentsline {subsection}{\numberline {5.2.2}状態遷移の可視化（ハイライトとログ表示）}{28}{}%
+\contentsline {subsection}{\numberline {5.2.3}変数ウォッチ機能（状態ステップに対応した変数値追跡）}{29}{}%
+\contentsline {subsection}{\numberline {5.2.4}ステップ実行（逐次確認）と任意ステップへの移動}{29}{}%
+\contentsline {section}{\numberline {5.3}同期モード固有機能の評価（2ノード同期タイムライン）}{29}{}%
+\contentsline {subsection}{\numberline {5.3.1}評価シナリオ}{29}{}%
+\contentsline {subsection}{\numberline {5.3.2}同期タイムライン表示}{29}{}%
+\contentsline {subsection}{\numberline {5.3.3}複数ノード比較の有効性（定性的観察）}{29}{}%
+\contentsline {section}{\numberline {5.4}定性的評価}{30}{}%
+\contentsline {subsection}{\numberline {5.4.1}単一ノードデバッグに対する効果}{30}{}%
+\contentsline {subsection}{\numberline {5.4.2}同期デバッグに対する効果}{30}{}%
+\contentsline {subsection}{\numberline {5.4.3}まとめ}{30}{}%
+\contentsline {chapter}{\numberline {第6章}考察}{31}{}%
+\contentsline {section}{\numberline {6.1}有効性の要因}{31}{}%
+\contentsline {subsection}{\numberline {6.1.1}状態遷移単位への再構成}{31}{}%
+\contentsline {subsection}{\numberline {6.1.2}変数値スナップショットの継承と更新}{31}{}%
+\contentsline {subsection}{\numberline {6.1.3}同期モードにおける統合表示}{31}{}%
+\contentsline {section}{\numberline {6.2}システムの限界・制約}{32}{}%
+\contentsline {subsection}{\numberline {6.2.1}ログ設計への依存}{32}{}%
+\contentsline {subsection}{\numberline {6.2.2}同期タイムラインに関する制約}{32}{}%
+\contentsline {section}{\numberline {6.3}今後の課題}{32}{}%
+\contentsline {subsection}{\numberline {6.3.1}ログ形式・解析対象の拡張}{32}{}%
+\contentsline {subsection}{\numberline {6.3.2}同期精度および比較支援の拡張}{32}{}%
+\contentsline {subsection}{\numberline {6.3.3}状態遷移図表現への対応}{32}{}%
+\contentsline {chapter}{\numberline {第7章}まとめ}{33}{}%
+\contentsline {section}{\numberline {7.1}本研究のまとめ}{33}{}%
+\contentsline {section}{\numberline {7.2}得られた知見と今後の展望}{33}{}%
+\contentsline {chapter}{参考文献}{34}{}%

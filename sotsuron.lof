@@ -6,10 +6,13 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces 提案システムの概要図 }}{8}{}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces どこでモデム(左)とGPSモジュール(右)}}{9}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 変数更新ロジック}}{15}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces ログモードのレイアウト}}{17}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 同期モードのタイムライン}}{19}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 同期モードのタイムライン}}{19}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces ログモードのレイアウト}}{13}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces シリアルモニタのレイアウト}}{14}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 同期モードのレイアウト}}{15}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 同期モードのタイムライン}}{16}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 同期モードのタイムライン}}{16}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ログ解析の処理フロー}}{19}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces 変数値スナップショットの継承と更新}}{21}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
