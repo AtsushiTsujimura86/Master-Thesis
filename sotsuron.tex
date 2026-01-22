@@ -526,133 +526,99 @@ Mermaidは図をテキスト（構文）として記述し、その文字列か�
 
 \subsubsection{入力と前提}
 \begin{par}
-同期タイムライン生成の入力は，各ノードから受信したログ行列である。
-ログ行は\ref{sec:log_design}節で述べたとおり，
-状態遷移ログ（\texttt{STATE:}）と変数更新ログ（\texttt{[VAR:}）を解析対象とする。
-同期モードではこれらに加えて，\textbf{各ログ行を受信した時刻}を保持する必要がある。
+同期タイムライン生成の入力は，各ノードから受信したログ行列である。ログ行は\ref{sec:log_design}節で述べるが、状態遷移ログ（\texttt{STATE:}）と変数更新ログ（\texttt{[VAR:}）を解析対象とする。シリアル受信モードの同期解析ではこれらに加えて，\textbf{各ログ行を受信した時刻}を保持する必要がある。
 \end{par}
 
 \subsubsection{受信時刻に基づくタイムスタンプ付与}
 \begin{par}
-各ノードのログ行はブラウザ上で受信されるため，受信時点の時刻を取得してログ行に付与する。
-本実装では，受信開始時刻を基準とした相対時刻を用い，
-ログ行ごとにタイムスタンプ$t$を付与する。
-これにより，ノード間で同一の基準時刻に対してイベントを整列できる。
+各ノードのログ行はブラウザ上で受信されるため，受信時点の時刻を取得してログ行に付与する。本実装では，JavaScriptの\texttt{performance.now()}を用いて、コードの実行時間（ページのロード開始時刻）から実行ログ受信開始時刻までの経過時間をミリ秒単位で取得し、ログ行ごとにタイムスタンプ$t$を付与する。これにより，ノード間で同一の基準時刻に対してイベントを整列できる。
 \end{par}
 
-\subsubsection{ノード別イベント列の構築}
-\begin{par}
-タイムスタンプを付与したログ行を行種別で分類し，
-各ノードについてイベント列$E_k=\{e_{k,0},e_{k,1},\dots\}$を構築する。
-各イベント$e$は，少なくとも時刻$t$，種別（状態遷移，変数更新），内容（状態名，変数名と値）を持つ。
-この段階では，各ノード内で時刻順にソートして管理する。
-\end{par}
 
 \subsubsection{イベント列の統合とタイムライン時刻列の生成}
 \begin{par}
-次に，複数ノードのイベント列を時刻情報に基づいてマージし，
-全ノード共通の時刻列$T=\{t_0,t_1,\dots\}$を生成する。
-ここで$t_i$は，「いずれかのノードでイベントが観測された時刻」である。
-時刻列$T$を生成することで，「この時刻で各ノードはどういう状態か」という問い合わせを
-共通の添字$i$で扱えるようになる。
+次に，2台のノードの状態遷移イベント列を時刻情報に基づいてマージし、全ノード共通のタイムライン時刻列$T=\{t_0,t_1,\dots\}$を生成する。ここで$t_i$は，「いずれかのノードで状態遷移イベントが観測された時刻」である。時刻列$T$を生成することで，「この時刻で他のノードはどういう状態か」を共通の添字$i$で扱えるようになる。
 \end{par}
 
 \begin{par}
-図\ref{fig:sync_timeline_ex1}の例では，
-ノード1が$t_0$で状態Aに入り，ノード2が$t_1$で状態Cに入る。
-以降も同様に，どちらかのノードで状態変化が発生した時刻が，
-タイムラインの節点として採用される。
+図\ref{fig:sync_timeline_ex1}の例では，ノード1が$t_0$で状態Aに入り，ノード2が$t_1$で状態Cに入る。以降も同様に，どちらかのノードで状態変化が発生した時刻が，タイムラインの節点として使われる。
 \end{par}
-
-\subsubsection{状態スナップショットの再構成}
-\begin{par}
-同期タイムラインの本質は，
-各$t_i$において各ノードの状態と変数値の\textbf{スナップショット}を確定する点にある。
-そのために，各ノードごとに「最新状態」と「最新変数表」を保持し，
-時刻列$T$を先頭から順に走査しながら更新する。
-具体的には，時刻$t_i$に到達した時点で，
-その時刻に発生したイベントを各ノードについて適用し，
-適用後の最新状態と最新変数表を$states[\mathrm{Node}]=\{\mathrm{state},\mathrm{vars}\}$として記録する。
-\end{par}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{./images/timeline_1.png}
+  \caption{同期解析におけるタイムライン（構築前）}
+  \label{fig:timeline1}
+\end{figure}
 
 \begin{par}
-ここで重要なのは，\textbf{イベントが発生していないノードも値を持つ}という点である。
-ある時刻$t_i$でノード1のみにイベントがあった場合でも，
-ノード2は直前までの最新状態を引き継いで表示される。
-この引き継ぎにより，タイムライン上の各時刻で
-全ノードの状態が必ず揃い，比較が可能となる。
-図\ref{fig:sync_timeline_ex1}では，
-例えば$t_2$においてノード2にイベントがなくても，
-ノード2は直前の状態Cを維持して表示される。
+図\ref{fig:timeline2}では、タイムライン時刻列$T=\{t_0,t_1,t_2,t_3\}$に基づき、各ノードが$t_i$においてどの状態にあったかを記録し、同期タイムラインを構築している。例えば、ノード1は$t_1$において図\ref{fig:sync_timeline_ex1}では状態遷移ログが存在しないが、同期タイムライン構築後の図\ref{fig:timeline2}では、直前の状態Aを引き継いで記録されている。また、ノード2では、$t_0$に状態遷移ログが存在しないため、状態は\texttt{undefined}として扱われている。
 \end{par}
-
-\subsubsection{初期未観測区間の扱い（undefined）}
 \begin{par}
-受信開始直後は，あるノードの状態遷移ログがまだ観測されていない場合がある。
-この場合，そのノードの状態は決定できないため，
-本システムでは状態を\texttt{undefined}として扱う。
-図\ref{fig:sync_timeline_ex2}の例では，
-$t_0$時点でノード2の状態遷移が未観測であるため，
-ノード2は\texttt{undefined}となる。
-その後，初めて状態Cが観測された時点以降は，
-通常の引き継ぎ規則に従って状態が確定する。
+ここで重要なのは，\textbf{イベントが発生していないノードも直前の値を引き継ぎ、値を保持する}という点である。ある時刻$t_i$でノード1のみにイベントがあった場合でも，ノード2は直前までの最新状態を引き継いで表示される。この引き継ぎにより，タイムライン上の各時刻で全ノードの状態が必ず揃い，比較が可能となる。なお、図\ref{fig:timeline1}および図\ref{fig:timeline2}は、状態遷移ログのみを示しているが、変数値についても同様に引き継ぎ処理を行う。
 \end{par}
 
-\subsubsection{生成結果データ構造}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{./images/timeline_2.png}
+  \caption{構築された同期タイムラインの例}
+  \label{fig:timeline2}
+\end{figure}
+
+
+
+\subsubsection{同期タイムラインのデータ構造}
 \begin{par}
-以上の処理により，同期タイムラインは時刻$t_i$ごとのスナップショット列として表現できる。
-本研究の実装では，概念的に次の構造を持つ配列として保持する。
-ここで，各要素は時刻$t$と，ノードごとの状態および変数値集合を含む。
-この表現により，表示側はステップ番号$i$を指定するだけで，
-同一時刻における両ノードの状態と変数値を参照できる。
+以上の処理により，同期タイムラインは時刻$t_i$ごとのスナップショット列として表現できる。ここではサンプルログを用いて作られた同期タイムラインのデータ構造例を示す。ソースコード\ref{lst:sample_logs}にサンプルログを示し，ソースコード\ref{lst:timeline_structure}に対応する同期タイムラインのデータ構造例を示す。サンプルログでは、図\ref{fig:sync_timeline_ex1}で示したノード1とノード2に類似したログを用いている。同期タイムラインでは、状態遷移が行われた$t=0,5,10,15$の4つの時刻において、両ノードの状態と変数値が記録されていることが分かる。
 \end{par}
+\begin{lstlisting}[caption=サンプルログ,label=lst:sample_logs]
+   Node1_Logs = [
+      { node1, time:  0, kind: "STATE", payload: { state: "A" } },
+      { node1, time: 1, kind: "VAR", payload: { key: "var01", value: 0 } },
+      { node1, time: 2, kind: "VAR", payload: { key: "var02", value: 0 } },
+      { node1, time: 10, kind: "STATE", payload: { state: "B" } },
+      { node1, time: 11, kind: "VAR", payload: { key: "var01", value: 1 } }
+    ];
+Node2_Logs = [
+      { node2, time:  5, kind: "STATE", payload: { state: "C" } },
+      { node2, time: 6, kind: "VAR", payload: { key: "var03", value: 0 } },
+      { node2, time:  15, kind: "STATE", payload: { state: "D" } },
+      { node2, time: 16, kind: "VAR", payload: { key: "var03", value: 2} }
+    ];
+\end{lstlisting}
 
-\begin{lstlisting}[caption=同期タイムラインのデータ構造（概念例）,label=lst:timeline_structure]
+\begin{lstlisting}[caption=同期タイムラインのデータ構造,label=lst:timeline_structure]
 timeline = [
   {
-    t: 1000,
+    t: 0,
     states: {
-      Node1: { state: "LISTEN",  vars: {} },
-      Node2: { state: "IDLE",    vars: { DEVICE_ID: 1 } },
+      Node1: { state: "A", vars: {var01: 0, var02: 0} },
+      Node2: { state: "undefined", vars: {} },
     },
   },
   {
-    t: 1100,
+    t: 5,
     states: {
-      Node1: { state: "RECEIVE", vars: { src_id: 2, rx_payload: 0 } },
-      Node2: { state: "TRANSMIT",vars: { DEVICE_ID: 1, success_cnt: 0 } },
+      Node1: { state: "A", vars: { var01: 0, var02: 0 } },
+      Node2: { state: "C", vars: {var03: 0} },
     },
   },
   {
-    t: 1200,
+    t: 10,
     states: {
-      Node1: { state: "SEND_ACK",vars: { src_id: 2, rx_payload: 0 } },
-      Node2: { state: "WAIT_ACK",vars: { DEVICE_ID: 1, success_cnt: 0 } },
+      Node1: { state: "B", vars: { var01: 1, var02: 0 } },
+      Node2: { state: "C", vars: {var03: 0} },
     },
   },
   {
-    t: 1300,
+    t: 15,
     states: {
-      Node1: { state: "LISTEN",  vars: { src_id: 2, rx_payload: 0 } },
-      Node2: { state: "WAIT_ACK",vars: { DEVICE_ID: 1, success_cnt: 0 } },
-    },
+      Node1: { state: "B", vars: { var01: 1, var02: 0 } },
+      Node2: { state: "D", vars: { var03: 2} }
+    }
   }
 ];
 \end{lstlisting}
 
-\begin{par}
-なお，図\ref{fig:sync_timeline_ex2}に示したような未観測区間は，
-初回の状態遷移ログが観測されるまで\texttt{undefined}として扱う。
-この扱いにより，実際の実験条件においてログの受信開始時刻が厳密に一致しない場合でも，
-タイムライン生成の整合性を保てる。
-\end{par}
-
-\begin{par}
-本節で示した図\ref{fig:sync_timeline_ex1}および図\ref{fig:sync_timeline_ex2}は，
-同期タイムライン生成の概念を説明するための模式図である。
-評価章では，実験ログから生成した同期タイムライン表示結果を用いて，
-同一時刻における状態と変数値の比較が可能であることを示す。
-\end{par}
 
 % =========================================================
 % 4.6 ここから「部品」の説明：ログ設計→ログ解析→共通ロジック

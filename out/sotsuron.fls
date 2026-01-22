@@ -78,6 +78,17 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT out/sotsuron.toc
 INPUT out/sotsuron.toc
 INPUT out/sotsuron.toc
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/min8.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm
 OUTPUT out/sotsuron.toc
 INPUT out/sotsuron.lof
 INPUT out/sotsuron.lof
@@ -93,8 +104,96 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./images/old_system_overview.png
 INPUT ./images/old_system_overview.png
 INPUT ./images/old_system_overview.png
 INPUT extractbb -B cropbox -O ./images/old_system_overview.png
+INPUT ./images/old_debug.png
+INPUT ./images/old_debug.png
+INPUT ./images/old_debug.png
+INPUT extractbb -B cropbox -O ./images/old_debug.png
+INPUT ./images/system_overview.png
+INPUT ./images/system_overview.png
+INPUT ./images/system_overview.png
+INPUT extractbb -B cropbox -O ./images/system_overview.png
+INPUT ./images/devices.jpg
+INPUT ./images/devices.jpg
+INPUT ./images/devices.jpg
+INPUT extractbb -B cropbox -O ./images/devices.jpg
+INPUT ./images/mode_flow_chart.png
+INPUT ./images/mode_flow_chart.png
+INPUT ./images/mode_flow_chart.png
+INPUT extractbb -B cropbox -O ./images/mode_flow_chart.png
+INPUT ./images/log_mode_layout.png
+INPUT ./images/log_mode_layout.png
+INPUT ./images/log_mode_layout.png
+INPUT extractbb -B cropbox -O ./images/log_mode_layout.png
+INPUT ./images/serial_monitor_layout.png
+INPUT ./images/serial_monitor_layout.png
+INPUT ./images/serial_monitor_layout.png
+INPUT extractbb -B cropbox -O ./images/serial_monitor_layout.png
+INPUT ./images/port_select.png
+INPUT ./images/port_select.png
+INPUT ./images/port_select.png
+INPUT extractbb -B cropbox -O ./images/port_select.png
+INPUT ./images/serial_mode_layout.png
+INPUT ./images/serial_mode_layout.png
+INPUT ./images/serial_mode_layout.png
+INPUT extractbb -B cropbox -O ./images/serial_mode_layout.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+INPUT ./images/timeline_1.png
+INPUT ./images/timeline_1.png
+INPUT ./images/timeline_1.png
+INPUT extractbb -B cropbox -O ./images/timeline_1.png
+INPUT ./images/timeline_2.png
+INPUT ./images/timeline_2.png
+INPUT ./images/timeline_2.png
+INPUT extractbb -B cropbox -O ./images/timeline_2.png
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
+INPUT ./images/log_parse_flowchart.png
+INPUT ./images/log_parse_flowchart.png
+INPUT ./images/log_parse_flowchart.png
+INPUT extractbb -B cropbox -O ./images/log_parse_flowchart.png
+INPUT ./images/var_update_logic.png
+INPUT ./images/var_update_logic.png
+INPUT ./images/var_update_logic.png
+INPUT extractbb -B cropbox -O ./images/var_update_logic.png
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT ./images/state_logger.png
+INPUT ./images/state_logger.png
+INPUT ./images/state_logger.png
+INPUT extractbb -B cropbox -O ./images/state_logger.png
+INPUT ./images/var_select.png
+INPUT ./images/var_select.png
+INPUT ./images/var_select.png
+INPUT extractbb -B cropbox -O ./images/var_select.png
+INPUT ./images/var_logger_step.png
+INPUT ./images/var_logger_step.png
+INPUT ./images/var_logger_step.png
+INPUT extractbb -B cropbox -O ./images/var_logger_step.png
+INPUT ./images/state_diagram_mermaid.png
+INPUT ./images/state_diagram_mermaid.png
+INPUT ./images/state_diagram_mermaid.png
+INPUT extractbb -B cropbox -O ./images/state_diagram_mermaid.png
+INPUT ./images/step_exe.png
+INPUT ./images/step_exe.png
+INPUT ./images/step_exe.png
+INPUT extractbb -B cropbox -O ./images/step_exe.png
+INPUT ./images/serial_monitor_exe.png
+INPUT ./images/serial_monitor_exe.png
+INPUT ./images/serial_monitor_exe.png
+INPUT extractbb -B cropbox -O ./images/serial_monitor_exe.png
+INPUT ./images/sync_after_input.png
+INPUT ./images/sync_after_input.png
+INPUT ./images/sync_after_input.png
+INPUT extractbb -B cropbox -O ./images/sync_after_input.png
+INPUT ./images/sync_exe.png
+INPUT ./images/sync_exe.png
+INPUT ./images/sync_exe.png
+INPUT extractbb -B cropbox -O ./images/sync_exe.png
+INPUT out/sotsuron.aux
