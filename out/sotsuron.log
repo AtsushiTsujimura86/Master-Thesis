@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.18)  23 JAN 2026 01:16
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.sjis) (TeX Live 2025) (preloaded format=platex 2025.9.18)  23 JAN 2026 04:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -180,23 +180,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 
-[4]
-
-[5])
+[4])
 \tf@toc=\write3
 \openout3 = `sotsuron.toc'.
 
 
 
-[6] (out/sotsuron.lof)
+[5] (out/sotsuron.lof)
 \tf@lof=\write4
 \openout4 = `sotsuron.lof'.
 
 
 
-[7
+[6
 
-] (out/sotsuron.lot)
+]
+
+[7] (out/sotsuron.lot)
 \tf@lot=\write5
 \openout5 = `sotsuron.lot'.
 
@@ -268,6 +268,9 @@ File: ./images/mode_flow_chart.png Graphic file (type bmp)
 
 [12]
 
+LaTeX Warning: Reference `sec:state_highlight' on page 13 undefined on input line 378.
+
+
 LaTeX Warning: Reference `sec:serial_mode' on page 13 undefined on input line 383.
 
 
@@ -336,85 +339,92 @@ File: ./images/var_update_logic.png Graphic file (type bmp)
 
 
 [25]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 750.
-(c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 750.
-
 
 [26]
 
 [27]
 
+LaTeX Warning: Reference `lst: state_diagram_json_example' on page 28 undefined on input line 824.
+
+
+
 [28]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 848.
+(c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 848.
+File: ./images/mermaid_state_diagram_example.png Graphic file (type bmp)
+<./images/mermaid_state_diagram_example.png>
+
 
 [29]
 
 [30]
-
-[31]
 第 5 章
 
 
-[32
+[31
 
 ]
+
+[32]
 
 [33]
 
 [34]
 
 [35]
-
-[36]
 File: ./images/state_logger.png Graphic file (type bmp)
 <./images/state_logger.png>
 
 
-[37]
+[36]
 File: ./images/var_select.png Graphic file (type bmp)
 <./images/var_select.png>
 File: ./images/var_logger_step.png Graphic file (type bmp)
 <./images/var_logger_step.png>
 
-Overfull \hbox (59.75096pt too wide) in paragraph at lines 1169--1170
+Overfull \hbox (59.75096pt too wide) in paragraph at lines 1065--1066
  [][] 
  []
 
 
+
+[37]
 
 [38]
 
 [39]
 File: ./images/state_diagram_mermaid.png Graphic file (type bmp)
 <./images/state_diagram_mermaid.png>
-
-
-[40]
 File: ./images/step_exe.png Graphic file (type bmp)
 <./images/step_exe.png>
 
 
-[41]
+[40]
+File: ./images/eval_device_arch.png Graphic file (type bmp)
+<./images/eval_device_arch.png>
 
-[42]
+
+[41]
 File: ./images/serial_monitor_exe.png Graphic file (type bmp)
 <./images/serial_monitor_exe.png>
 
+
+[42]
 
 [43]
 
 [44]
 File: ./images/sync_after_input.png Graphic file (type bmp)
 <./images/sync_after_input.png>
-
-
-[45]
 File: ./images/sync_exe.png Graphic file (type bmp)
 <./images/sync_exe.png>
 
+
+[45]
 
 [46]
 
@@ -425,21 +435,19 @@ File: ./images/sync_exe.png Graphic file (type bmp)
 [48
 
 ]
-
-[49]
 第 7 章
 
 
-[50
+[49
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1510--1512
+Underfull \hbox (badness 10000) in paragraph at lines 1417--1419
 []\OT1/cmr/m/n/12 Eclipse Foun-da-tion,  \JY1/mc/m/n/12 “ \OT1/cmr/m/n/12 MQTT: Mes-sage Queu-ing Teleme-try Trans-port, \JY1/mc/m/n/12 ”
  []
 
 
 
-[51
+[50
 
 ] (out/sotsuron.aux)
  ***********
@@ -452,12 +460,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3322 strings out of 468440
- 51486 string characters out of 5450466
- 717608 words of memory out of 5000000
- 31945 multiletter control sequences out of 15000+600000
+ 3332 strings out of 468440
+ 51992 string characters out of 5450466
+ 684536 words of memory out of 5000000
+ 31953 multiletter control sequences out of 15000+600000
  641535 words of font info for 97 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 57i,12n,65p,804b,1620s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,863b,1616s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/sotsuron.dvi (59 pages, 179232 bytes).
+Output written on out/sotsuron.dvi (58 pages, 170568 bytes).

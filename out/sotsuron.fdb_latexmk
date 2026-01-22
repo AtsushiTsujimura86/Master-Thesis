@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1769098494.91677 "out/sotsuron.dvi" "out/sotsuron.pdf" "out/sotsuron" 1769098494.91149 0
-  "out/sotsuron.dvi" 1769098532 153316 722386a1e0cbf3318e115be74744d679 "latex"
+["dvipdf"] 1769111483.17236 "out/sotsuron.dvi" "out/sotsuron.pdf" "out/sotsuron" 1769111489.67643 0
+  "out/sotsuron.dvi" 1769111482 170568 e0febf7f533383dffb0d53f38573a315 "latex"
   (generated)
   "out/sotsuron.pdf"
   (rewritten before read)
-["latex"] 1769098511.61707 "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" "out/sotsuron.dvi" "sotsuron" 1769098532.21908 0
-  "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" 1769098510 89365 fbadd36978f205693d2b532c9f114fa1 ""
+["latex"] 1769111462.03031 "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" "out/sotsuron.dvi" "sotsuron" 1769111489.66772 0
+  "c:/Users/ats_1/Desktop/Master-Thesis/sotsuron.tex" 1769111447 93745 acf98457f974450fee9950faff7e9f1e ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1758180057 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1758179638 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1758182542 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
@@ -50,8 +50,10 @@
   "c:/texlive/2025/texmf.cnf" 1758184292 713 e69b156964470283e0530f5060668171 ""
   "float.sty" 1700811402 6749 16d2656a1984957e674b149555f1ea1d ""
   "images/devices.jpg" 1760518863 1374968 1657e5672264145e61309d533bc976ff ""
+  "images/eval_device_arch.png" 1769111160 26941 ac44749558ca3aeffa93b7271b3319bc ""
   "images/log_mode_layout.png" 1769052306 99592 eb2b25a9e5725549b12f93b979a61b07 ""
   "images/log_parse_flowchart.png" 1769052306 52048 daeae91d3c7107f7be10d2eca431e276 ""
+  "images/mermaid_state_diagram_example.png" 1769102846 8363 573c503f32c5055c3c9e2fbef56ab880 ""
   "images/mode_flow_chart.png" 1769092965 22824 ef81648b620f0b9a50c51a72eba719f4 ""
   "images/old_debug.png" 1759981598 37824 a1d8c8bb929779baf5a039df1586d05f ""
   "images/old_system_overview.png" 1769078866 58146 8b7b19f3c535e5078174bd602dbf3c6c ""
@@ -70,11 +72,11 @@
   "images/var_logger_step.png" 1769055241 203197 00939230ffaf1f805a4b0e6de7a57e08 ""
   "images/var_select.png" 1769055224 60683 36fd6b9bb4427ca4b9b65ad06c107514 ""
   "images/var_update_logic.png" 1769052306 10724 1ac07cd392b0d690c9ce4b960750794a ""
-  "out/sotsuron.aux" 1769098532 21387 afeee9b4cef265a1fb79644837b7eafc "latex"
-  "out/sotsuron.lof" 1769098532 2541 f9aef4c48de32928765c3b0161e1f200 "latex"
-  "out/sotsuron.lot" 1769098532 140 104a8a462b27a2267fd07b368245cdd0 "latex"
-  "out/sotsuron.toc" 1769098532 8279 0c3004a7daa642eae397245454d7ae00 "latex"
-  "sotsuron.tex" 1769098510 89365 fbadd36978f205693d2b532c9f114fa1 ""
+  "out/sotsuron.aux" 1769111482 19621 d3fec2c8c0f8591bb52c8663edd2f8a4 "latex"
+  "out/sotsuron.lof" 1769111482 2763 af3a8193ec3d3895d4071775821a50ad "latex"
+  "out/sotsuron.lot" 1769111482 140 104a8a462b27a2267fd07b368245cdd0 "latex"
+  "out/sotsuron.toc" 1769111482 7168 41afe16bdbe40fd42bf598f18e8ab175 "latex"
+  "sotsuron.tex" 1769111447 93745 acf98457f974450fee9950faff7e9f1e ""
   "suthesis.sty" 1700207062 7451 ada3a2e5b0ead1153078cf7bcc148c3d ""
   (generated)
   "out/sotsuron.aux"

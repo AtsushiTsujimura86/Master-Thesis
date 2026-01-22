@@ -160,10 +160,14 @@ INPUT ./images/var_update_logic.png
 INPUT ./images/var_update_logic.png
 INPUT ./images/var_update_logic.png
 INPUT extractbb -B cropbox -O ./images/var_update_logic.png
-INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
-INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
-INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT ./images/mermaid_state_diagram_example.png
+INPUT ./images/mermaid_state_diagram_example.png
+INPUT ./images/mermaid_state_diagram_example.png
+INPUT extractbb -B cropbox -O ./images/mermaid_state_diagram_example.png
 INPUT ./images/state_logger.png
 INPUT ./images/state_logger.png
 INPUT ./images/state_logger.png
@@ -184,6 +188,10 @@ INPUT ./images/step_exe.png
 INPUT ./images/step_exe.png
 INPUT ./images/step_exe.png
 INPUT extractbb -B cropbox -O ./images/step_exe.png
+INPUT ./images/eval_device_arch.png
+INPUT ./images/eval_device_arch.png
+INPUT ./images/eval_device_arch.png
+INPUT extractbb -B cropbox -O ./images/eval_device_arch.png
 INPUT ./images/serial_monitor_exe.png
 INPUT ./images/serial_monitor_exe.png
 INPUT ./images/serial_monitor_exe.png
